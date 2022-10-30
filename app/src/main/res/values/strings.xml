@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cinema</string>
     <string name="app_name_uppercase">CINEMA</string>
@@ -23,4 +24,6 @@
     <string name="favorite">Favorite</string>
     <string name="title_favorite">Favorite</string>
     <string name="share_movie">Im inviting you to watch this movie</string>
+    <string name="title_similar">Similar Movie</string>
+    <string name="title_now_showing">Now Showing</string>
 </resources>

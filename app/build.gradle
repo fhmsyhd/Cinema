@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
+apply from: '../shared_dependencies.gradle'
 
 android {
     compileSdk 32
@@ -38,6 +39,8 @@ android {
 }
 
 dependencies {
+    implementation project(":data")
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -69,7 +72,6 @@ dependencies {
 
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
-//    implementation "io.insert-koin:koin-android-viewmodel:$koin_version"
 
     implementation "com.airbnb.android:lottie:$lottie_version"
 }

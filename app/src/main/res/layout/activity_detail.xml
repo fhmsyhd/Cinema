@@ -59,8 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_movie"
-            android:layout_marginTop="-69dp"
             android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-79dp"
             app:cardBackgroundColor="@color/color_primary"
             app:cardCornerRadius="6dp">
 
@@ -92,46 +92,52 @@
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stretchColumns="1"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:stretchColumns="1">
 
                     <TableRow>
+
                         <TextView
+                            android:padding="3dip"
                             android:text="@string/release_title"
-                            android:textColor="@android:color/darker_gray"
-                            android:padding="3dip" />
+                            android:textColor="@android:color/darker_gray" />
+
                         <TextView
                             android:id="@+id/tv_release"
+                            android:padding="3dip"
                             android:text="@string/movie_release_date"
-                            android:textColor="@color/white"
-                            android:padding="3dip" />
+                            android:textColor="@color/white" />
                     </TableRow>
 
                     <TableRow>
+
                         <TextView
-                            android:text="@string/popularity_title"
-                            android:textColor="@android:color/darker_gray"
                             android:layout_marginEnd="24dp"
-                            android:padding="3dip" />
+                            android:padding="3dip"
+                            android:text="@string/popularity_title"
+                            android:textColor="@android:color/darker_gray" />
+
                         <TextView
                             android:id="@+id/tv_popularity"
+                            android:padding="3dip"
                             android:text="@string/movie_popularity"
-                            android:textColor="@color/white"
-                            android:padding="3dip" />
+                            android:textColor="@color/white" />
                     </TableRow>
 
                     <TableRow>
+
                         <TextView
+                            android:padding="3dip"
                             android:text="@string/age_rating_title"
                             android:textColor="@android:color/darker_gray"
-                            android:padding="3dip"
-                            android:visibility="gone"/>
+                            android:visibility="gone" />
+
                         <TextView
                             android:id="@+id/tv_age_rating"
+                            android:padding="3dip"
                             android:text="@string/movie_age_rating"
                             android:textColor="@color/white"
-                            android:padding="3dip"
-                            android:visibility="gone"/>
+                            android:visibility="gone" />
                     </TableRow>
 
                 </TableLayout>
@@ -164,6 +170,44 @@
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     app:backgroundTint="@color/color_primary_lighter" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_similar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_desc"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="18dp"
+            app:cardBackgroundColor="@color/color_primary"
+            app:cardCornerRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_similar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="@string/title_similar"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="8dp"
+                    tools:listitem="@layout/item_movie" />
 
             </LinearLayout>
 
